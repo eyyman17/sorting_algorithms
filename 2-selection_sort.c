@@ -1,9 +1,9 @@
 #include "sort.h"
 
 /**
- * selection_sort_custom - function that sorts an array
- *@size_val:  size of array
- * @array_vals: list with numbers
+ * selection_sort - function that sorts an array
+ * @size:  size of array
+ * @array: list with numbers
  */
 
 
