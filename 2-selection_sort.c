@@ -7,29 +7,29 @@
  */
 
 
-void selection_sort_custom(int *array_vals, size_t size_val)
+void selection_sort(int *array, size_t size)
 {
 	size_t iterator, index_val;
 	int temp_val, swap_val, indicator = 0;
 
-	if (array_vals == NULL)
+	if (array == NULL)
 		return;
-	for (iterator = 0; iterator < size_val; iterator++)
+	for (iterator = 0; iterator < size; iterator++)
 	{
 		temp_val = iterator;
 		indicator = 0;
-		for (index_val = iterator + 1; index_val < size_val; index_val++)
+		for (index_val = iterator + 1; index_val < size; index_val++)
 		{
-			if (array_vals[temp_val] > array_vals[index_val])
+			if (array[temp_val] > array[index_val])
 			{
 				temp_val = index_val;
 				indicator += 1;
 			}
 		}
-		swap_val = array_vals[iterator];
-		array_vals[iterator] = array_vals[temp_val];
-		array_vals[temp_val] = swap_val;
+		swap_val = array[iterator];
+		array[iterator] = array[temp_val];
+		array[temp_val] = swap_val;
 		if (indicator != 0)
-			print_array(array_vals, size_val);
+			print_array(array, size);
 	}
 }
